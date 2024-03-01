@@ -7,9 +7,18 @@ public class stringParce {
         str = in.next();
         int num = 0;
         int len = str.length() - 1;
-        for (int i = len, n = 0; i >= n; i--) {
-            char ch = str.charAt(i);
-            num += (int) (Character.digit(ch, 10) * Math.pow(10, len - i));
+        if (str.charAt(0) == '-'){
+            for (int i = len, n = 1; i >= n; i--) {
+                char ch = str.charAt(i);
+                num += (int) (Character.digit(ch, 10) * Math.pow(10, len - i));
+            }
+            num *= -1;
+        }
+        else{
+            for (int i = len, n = 0; i >= n; i--) {
+                char ch = str.charAt(i);
+                num += (int) (Character.digit(ch, 10) * Math.pow(10, len - i));
+            }
         }
         System.out.println(num);
     }
