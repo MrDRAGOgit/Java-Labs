@@ -2,7 +2,6 @@ import java.util.Comparator;
 import java.util.Objects;
 
 public class Author implements Comparable<Author>{
-//public class Author implements Comparator<Author> {
     private String name;
 
     public Author(String name) {
@@ -33,11 +32,6 @@ public class Author implements Comparable<Author>{
     public void setName(String name) {
         this.name = name;
     }
-
-//    @Override
-//    public int compare(Author o1, Author o2) {
-//        return o1.name.compareTo(o2.getName());
-//    }
 
     @Override
     public int compareTo(Author o) {
