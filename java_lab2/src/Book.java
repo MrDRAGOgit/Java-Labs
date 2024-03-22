@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public class Book implements Comparable<Book> {
-    public String title;
-    public int numPages;
-    public Author author;
+    private String title;
+    private int numPages;
+    private Author author;
 
     public Book(String title, int numPages, Author author) {
         this.title = title;
